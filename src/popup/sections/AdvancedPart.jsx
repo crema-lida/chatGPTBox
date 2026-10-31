@@ -39,9 +39,10 @@ function ApiParams({ config, updateConfig }) {
           }}
         />
       </label>
-      <label>
-        {t('Chat Completions token parameter')}
+      <label style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <span style={{ whiteSpace: 'nowrap' }}>{t('Token parameter')}</span>
         <select
+          style={{ flex: 1, minWidth: 0, marginBottom: 0 }}
           value={config.chatCompletionsTokenParameter || 'auto'}
           onChange={(e) => {
             updateConfig({ chatCompletionsTokenParameter: e.target.value })
