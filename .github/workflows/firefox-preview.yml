@@ -28,6 +28,8 @@ jobs:
         run: npm test
       - name: Check lint
         run: npm run lint
+      - name: Check formatting
+        run: npm run pretty:check
       - name: Build browser extensions
         run: npm run build
       - name: Verify Firefox bundle
